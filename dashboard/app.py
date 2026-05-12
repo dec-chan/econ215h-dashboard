@@ -3,8 +3,17 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-from scipy.special import expit, logit
 import os
+
+
+def expit(x):
+    x = np.asarray(x, dtype=float)
+    return np.where(x >= 0, 1 / (1 + np.exp(-x)), np.exp(x) / (1 + np.exp(x)))
+
+
+def logit(p):
+    p = np.asarray(p, dtype=float)
+    return np.log(p / (1 - p))
 
 st.set_page_config(
     page_title="One Equation, Many Biases",
