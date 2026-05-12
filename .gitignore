@@ -1,0 +1,22 @@
+# Ignore everything by default
+*
+
+# Allow the dashboard app
+!dashboard/
+!dashboard/app.py
+!dashboard/.streamlit/
+!dashboard/.streamlit/config.toml
+
+# Allow small processed data files only
+!data/
+!data/agarwal/
+!data/agarwal/dashboard_data.csv
+!data/eoy/
+!data/eoy/dashboard_data.csv
+!data/grether/
+!data/grether/grether_aggregate_data.csv
+
+# Allow repo config
+!.gitignore
+!requirements.txt
+!README.md
